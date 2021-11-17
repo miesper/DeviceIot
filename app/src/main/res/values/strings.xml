@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Android App Sample - Device Client</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="messages_sent">Messages sent:</string>
+    <string name="_0">0</string>
+    <string name="receipts_confirmed">Receipts confirmed:</string>
+    <string name="send_failures">Send Failures:</string>
+    <string name="send_interval_ms">Send Interval (ms):</string>
+    <string name="messages_received">Messages received:</string>
+    <string name="last_temp_reading_c">Last Temp. Reading (C):</string>
+    <string name="last_humidity_reading">Last Humidity Reading (%):</string>
+    <string name="retry_max">Retry max:</string>
+    <string name="minbackoff">MinBackOff:</string>
+    <string name="maxbackoff">MaxBackOff:</string>
+    <string name="first_fast_retry">First Fast Retry:</string>
+    <string name="last_message_sent">Last Message sent:</string>
+    <string name="last_message_received">Last Message received:</string>
+</resources>

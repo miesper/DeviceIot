@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: org.bouncycastle:bcmail-jdk15on:1.69">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcmail-jdk15on/1.69/759f9233ac99a576e4963bd09b0f830a2716d2ec/bcmail-jdk15on-1.69.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcmail-jdk15on/1.69/d55c3d72c097814c916ec01aa1525fb62ebc63ac/bcmail-jdk15on-1.69-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcmail-jdk15on/1.69/37efa0c443d0f7d8e34b9b891944b4427a54cfe9/bcmail-jdk15on-1.69-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

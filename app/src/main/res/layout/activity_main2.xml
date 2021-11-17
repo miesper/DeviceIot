@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.microsoft.azure.iot.sdk.samples.androidsample.MainActivity">
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="40dp"
+        android:onClick="btnStartOnClick"
+        android:text="@string/start" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btnStart"
+        android:layout_marginEnd="59dp"
+        android:onClick="btnStopOnClick"
+        android:text="@string/stop"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/txtMsgsSent"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/messages_sent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/txtMsgsSentVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/txtMsgsSent"
+        android:layout_marginEnd="25dp"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtReceiptsConfirmed"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtMsgsSent"
+        android:text="@string/receipts_confirmed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtReceiptsConfirmedVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSentVal"
+        android:layout_below="@+id/txtMsgsSentVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtSendFailures"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtReceiptsConfirmed"
+        android:layout_below="@+id/txtReceiptsConfirmed"
+        android:text="@string/send_failures"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtSendFailuresVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtReceiptsConfirmedVal"
+        android:layout_below="@+id/txtReceiptsConfirmedVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtSendInterval"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtSendFailures"
+        android:layout_below="@+id/txtSendFailures"
+        android:text="@string/send_interval_ms"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtSendIntervalVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtSendFailuresVal"
+        android:layout_below="@+id/txtSendFailuresVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtMsgsReceived"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtSendInterval"
+        android:layout_below="@+id/txtSendInterval"
+        android:text="@string/messages_received"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtMsgsReceivedVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtSendIntervalVal"
+        android:layout_below="@+id/txtSendIntervalVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtLastTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtMsgsReceived"
+        android:text="@string/last_temp_reading_c"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtLastTempVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSentVal"
+        android:layout_below="@+id/txtMsgsReceivedVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/txtLastHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtLastTemp"
+        android:text="@string/last_humidity_reading"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtLastHumidityVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSentVal"
+        android:layout_below="@+id/txtLastTempVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/txtRetryCount"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtLastHumidity"
+        android:text="@string/retry_max"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtRetryCountVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSentVal"
+        android:layout_below="@+id/txtLastHumidityVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_dark" />
+
+
+    <TextView
+        android:id="@+id/txtMinBackOff"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtRetryCount"
+        android:text="@string/minbackoff"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtMinBackOffVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSentVal"
+        android:layout_below="@+id/txtRetryCountVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_dark" />
+
+
+    <TextView
+        android:id="@+id/txtMaxBackOff"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtMinBackOff"
+        android:text="@string/maxbackoff"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtMaxBackOffVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSentVal"
+        android:layout_below="@+id/txtMinBackOffVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/txtDeltaBackOff"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtMaxBackOff"
+        android:text="@string/minbackoff"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtDeltaBackOffVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSentVal"
+        android:layout_below="@+id/txtMaxBackOffVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/txtFirstFastRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtDeltaBackOff"
+        android:text="@string/first_fast_retry"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtFirstFastRetryVal"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSentVal"
+        android:layout_below="@+id/txtDeltaBackOffVal"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/txtLastMsgSent"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtFirstFastRetry"
+        android:text="@string/last_message_sent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtLastMsgSentVal"
+        android:layout_width="316dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/txtFirstFastRetryVal"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:autoSizeMaxTextSize="14sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_dark" />
+
+    <TextView
+        android:id="@+id/txtLastMsgReceived"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtLastMsgSentVal"
+        android:text="@string/last_message_received"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:id="@+id/txtLastMsgReceivedVal"
+        android:layout_width="316dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/txtMsgsSent"
+        android:layout_below="@+id/txtLastMsgReceived"
+        android:gravity="center_vertical"
+        android:text="@string/_0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/holo_blue_dark"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="14sp"
+        android:autoSizeStepGranularity="2sp"/>
+
+
+</RelativeLayout>
