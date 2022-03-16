@@ -214,13 +214,17 @@ public class MainActivity extends AppCompatActivity {
         BatteryManager bm = (BatteryManager) getApplicationContext().getSystemService(BATTERY_SERVICE);
         int batLevel = bm.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY);
         Log.e("battery", String.valueOf(batLevel));
-//        String msgStr = "\"temperature\":" + String.format("%.2f", temperature) +
-//                ", \"humidity\":" + String.format("%.2f", humidity) +
-//                ", \"battery\":" + batLevel;
 
-        String msgStr = "\"temperature\":" + (int) temperature +
-                ", \"humidity\":" + (int) humidity +
-                ", \"battery\":" + batLevel;
+        String temp = String.valueOf(temperature);
+        String humi = String.valueOf(humidity);
+        temp = temp.replace(",",".");
+        humi = humi.replace(",",".");
+
+
+        String msgStr = "\"temperature\": " + (int) temperature +
+                ", \"humidity\": " + (int) humidity +
+                ", \"battery\": " + batLevel;
+
         try
         {
             sendMessage = new Message(msgStr);
@@ -261,7 +265,6 @@ public class MainActivity extends AppCompatActivity {
                 {
                     JSONObject json = new JSONObject(propertyValue.toString());
                     sendMessagesInterval = json.getInt("interval");
-
                     retryCount = json.getInt("retrycount");
                     minBackOff = json.getInt("minbackoff");
                     maxBackOff = json.getInt("maxbackoff");
@@ -281,11 +284,6 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                     Log.e("error", e.toString());
                 }
-                    //sendMessagesInterval = Integer.parseInt(propertyValue.toString());
-//                    Toast.makeText(getApplicationContext(), "Intervalo alterado para "+
-//                            String.valueOf(sendMessagesInterval)+ "ms", Toast.LENGTH_LONG).show();
-//                    txtLastMsgInterval.setText(propertyValue.toString());
-
 
             }
         };

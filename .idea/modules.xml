@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidSample.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidSample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AndroidSample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AndroidSample.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/things/AndroidSample.things.iml" filepath="$PROJECT_DIR$/.idea/modules/things/AndroidSample.things.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DeviceIot.iml" filepath="$PROJECT_DIR$/.idea/modules/DeviceIot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DeviceIot.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DeviceIot.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/things/DeviceIot.things.iml" filepath="$PROJECT_DIR$/.idea/modules/things/DeviceIot.things.iml" />
     </modules>
   </component>
 </project>
